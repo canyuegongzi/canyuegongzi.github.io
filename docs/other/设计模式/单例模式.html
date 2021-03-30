@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<button id="loginBtn">324234</button>
+<button id="loginBtn2">222222</button>
+
+<script>
+// class Modal {
+// 	constructor(name) {
+// 		this.name = name;
+// 		this.getName();
+// 	}
+//     getName() {
+//         return this.name;
+//     }
+// }
+// Modal.create = (function() {
+//     let instance = null;
+//     return function(name) {
+//         if(!instance) {
+//            instance = new Modal(name);
+//         }
+//         return instance
+//     }
+// })()
+// let m1 = Modal.create('aaa');
+// let m2 = Modal.create('bbb');
+
+// console.log(m1, m2)
+// console.log(m1 === m2) // true
+
+var Sing = function(name){
+    this.name = name;
+}
+Sing.prototype.getName = function(){
+    console.log(this.name)
+}
+Sing.getInstance = (function(name){
+    var instance = null;
+    return function(name){
+        if(!instance){
+            instance = new Sing(name)
+        }
+        return instance
+    }
+})()
+var a = Sing.getInstance('aaa')
+var b = Sing.getInstance('bbb')
+
+console.log(a, b)
+
+let Modal = (function(){
+    let instance;
+    return function(name) {
+        if (instance) {
+           return instance;
+        }
+        this.name = name;
+        return instance = this;
+    }
+})();
+
+Modal.prototype.getName = function() {
+    return this.name
+}
+
+let question = new Modal('问题框');
+let answer = new Modal('回答框');
+
+console.log(question === answer); // true
+console.log(question.getName());  // '问题框'
+console.log(answer.getName());  // '问题框'
+
+</script>  
+</body>
+</html>

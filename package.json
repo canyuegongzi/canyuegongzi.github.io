@@ -1,0 +1,17 @@
+{
+  "name": "vuepress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "publish": "deploy.sh"
+  },
+  "author": "LiBai",
+  "repository": "github:canyuegongzi/Blog",
+  "license": "ISC",
+  "dependencies": {
+    "vuepress": "^1.4.1"
+  }
+}

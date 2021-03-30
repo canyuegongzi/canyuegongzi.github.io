@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<script>
+let c = [1, 2, 3]
+let d = {a:2}
+
+
+Object.prototype.valueOf = function(){
+    console.log('22 Object')
+}
+Array.prototype.valueOf = function(){
+    console.log('22 Array')
+}
+Number.prototype.valueOf = function(){
+    console.log('22 Number')
+}
+String.prototype.valueOf = function(){
+    console.log('22 String')
+}
+
+Object.prototype.toString = function(){
+    console.log('Object')
+}
+Array.prototype.toString = function(){
+    // console.log('aaa', this.join(','))
+    console.log('Array')
+    return this.join(',')
+}
+Number.prototype.toString = function(){
+    console.log('Number')
+}
+String.prototype.toString = function(){
+    console.log('String')
+}
+
+let dd = 2;
+let cc = '3'
+
+console.log(dd + cc)    // 没打印 Number
+console.log(cc + {})    // 有打印 Object
+
+// console.log('s')    // 's'
+// console.log('s'+2)  // 's2'
+// console.log(c < 2)  // false        (一次 => 'Array')
+// console.log(c + c)  // "1,2,31,2,3" (两次 => 'Array')
+// console.log(d > d)  // false        (两次 => 'Object')
+
+
+
+
+// class A {
+//     constructor(count) {
+//         this.count = count
+//     }
+//     toString() {
+//         return '我有这么多钱：' + this.count
+//     }
+// }
+// let a = new A(100)
+
+// console.log(a)
+// console.log(a.toString())   // 我有这么多钱：100
+// console.log(a + 1)          // 我有这么多钱：1001
+
+// 两者区别
+
+// class A {
+//     valueOf() {
+//         console.log('valueOf')
+//         return 2
+//     }
+//     // toString() {
+//     //     console.log('toString')
+//     //     return '哈哈哈'
+//     // }
+// }
+
+// let a = new A()
+
+// Object.prototype.toString = null; 
+
+// console.log(a.toString())
+// console.log(String(a))  // '哈哈哈'   => (toString)
+// console.log(Number(a))  // 2         => (valueOf)
+// console.log(a + '22')   // '222'     => (valueOf)
+// console.log(a == 2)     // true      => (valueOf)
+// console.log(a === 2)    // false
+
+// a===1&&a===2&&a===3
+// class AA {
+//     constructor(value) {
+//         this.value = value;
+//     }
+//     valueOf() {
+//         return this.value++;
+//     }
+// }
+// const aa = new AA(1);
+// if (aa == 1 && aa == 2 && aa == 3) {
+//     console.log("Hi Eno!");
+// }
+
+// let value = 1;
+// Object.defineProperty(window, 'v_a', {
+//     get() {
+//         console.log(value)
+//         return value++
+//     }
+// })
+
+// if (v_a === 1 && v_a === 2 && v_a === 3) {
+//     console.log("Hi Libai!")
+// }
+
+
+
+
+// 无限累加函数
+// function add(a) {
+// 	function sum(b) { // 使用闭包
+//     	a = b ? a + b : a; // 累加
+//         console.log(3)
+//     	return sum;
+//  	}
+//     console.log(1)
+//     sum.toString = function() { // 只在最后一次调用
+//         console.log(a)
+//         console.log('toString') 
+//         return a;
+//     }
+//     console.log(2)
+//  	return sum; // 返回一个函数
+// }
+
+// console.log(add(1)(2)(3)(4)(10))
+// console.log(add(1)(2))
+// console.log(add(1)(2)(3))
+// console.log(add(1)(2)(3)(4))
+
+
+
+
+// function aa(){
+//     function fn(){
+//         a = 2
+//         console.log(a)
+//     }
+//     fn.valueOf = () => {
+//         console.log(224324234)
+//         return 542
+//     }
+//     fn.toString = null
+//     return fn
+// }
+
+// const a = aa()
+
+// console.log(a)
+
+// function add(){
+//     // 1 把所有参数转换成数组
+//     let args = Array.prototype.slice.call(arguments)
+
+//     // 2 把所有参数都合并成一个数组
+//     let fn = function() {
+//         let arg_fn = Array.prototype.slice.call(arguments)
+
+//         console.log(arg_fn)
+
+//         // 3 再次调用add函数，传递合并的参数
+//         return add.apply(null, args.concat(arg_fn))
+//     }
+
+//     fn.toString = function() {
+//         return args.reduce(function(a, b) {
+//             return a + b
+//         })
+//     }
+
+//     console.log(args) 
+
+//     return fn
+// }
+
+// let a = add(2, 3)(1, 2)(2, 3)
+
+// if (a == 2) {
+//     console.log(2)
+// } else {
+//     console.log(a)
+// }
+// console.log(add(2, 3)(1, 2)(2, 3))
+
+
+
+// Symbol.toPrimitive
+
+
+// class A {
+//     constructor(count) {
+//         this.count = count
+//     }
+//     valueOf() {
+//         console.log('valueOf')
+//         return 2
+//     }
+//     toString() {
+//         console.log('toString')
+//         return '哈哈哈'
+//     }
+//     [Symbol.toPrimitive](hint) {
+//         console.log('=====', hint)
+//         if (hint == "number") {
+//             return 10;
+//         }
+//         if (hint == "string") {
+//             return "Hello Libai";
+//         }
+//         return true;
+//     }
+// }
+
+// const a = new A(10)
+
+// console.log(`${a}`)     // 'Hello Libai' => (hint == "string")
+// console.log(String(a))  // 'Hello Libai' => (hint == "string")
+// console.log(+a)         // 10            => (hint == "number")
+// console.log(a * 20)     // 200           => (hint == "number")
+// console.log(a / 20)     // 0.5           => (hint == "number")
+// console.log(Number(a))  // 10            => (hint == "number")
+// console.log(a + '22')   // 'true22'      => (hint == "default")
+// console.log(a == 10)     // false        => (hint == "default")
+
+
+
+</script>    
+</body>
+</html>
