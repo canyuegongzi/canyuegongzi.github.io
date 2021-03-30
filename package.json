@@ -8,8 +8,8 @@
     "build": "vuepress build docs",
     "publish": "deploy.sh"
   },
-  "author": "LiBai",
-  "repository": "github:canyuegongzi/Blog",
+  "author": "Marvin",
+  "repository": "https://github.com/canyuegongzi/canyuegongzi.github.io",
   "license": "ISC",
   "dependencies": {
     "vuepress": "^1.4.1"
