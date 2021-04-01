@@ -1,5 +1,5 @@
 module.exports = {
-	title: '残月公子',
+	title: 'Marvin',
 	description: 'Live and Study.',
 	head: [
 		['link', { rel: 'icon', href: '/images/photo.png' }],
@@ -19,7 +19,7 @@ module.exports = {
 			{text: 'Web', link: '/web/'},
 			{text: '进阶', link: '/other/'},
 			{text: '后端', link: '/after/'},
-			{text: '心情小镇', link: 'http://blog.canyuegongzi.xyz'},
+			{text: 'Blog', link: 'http://blog.canyuegongzi.xyz'},
 			{text: '全栈项目', link: 'https://github.com/canyuegongzi'},
 			{text: 'Github', link: 'https://github.com/canyuegongzi'}
 		],
