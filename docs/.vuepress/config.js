@@ -16,6 +16,7 @@ module.exports = {
 	},
 	themeConfig: {
 		nav:[
+			{text: 't-cli', link: '/t-cli/'},
 			{text: 'Web', link: '/web/'},
 			{text: '进阶', link: '/other/'},
 			{text: '后端', link: '/after/'},
@@ -24,6 +25,26 @@ module.exports = {
 			{text: 'Github', link: 'https://github.com/canyuegongzi'}
 		],
 		sidebar: {
+			'/t-cli/': [
+				{
+					title: '安装',
+					sidebarDepth: 2,
+					children: [
+						'/t-cli/安装/install',
+						'/t-cli/安装/t-cli-cmd',
+					]
+				},
+				{
+					title: '工程模板',
+					sidebarDepth: 2,
+					children: [
+						'/t-cli/工程模板/node-nest',
+						'/t-cli/工程模板/node-simple-typescript',
+						'/t-cli/工程模板/web-webpack4-vue2-javascript',
+						'/t-cli/工程模板/web-webpack4-typescript',
+					]
+				}
+			],
 			'/web/': [
 				{
 					title: 'Vue 原理',
