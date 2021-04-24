@@ -15,6 +15,7 @@ module.exports = {
 		lineNumbers: false
 	},
 	themeConfig: {
+		lastUpdated: true,
 		nav:[
 			{text: 't-cli', link: '/t-cli/'},
 			{text: 'Web', link: '/web/'},
@@ -40,8 +41,11 @@ module.exports = {
 					children: [
 						'/t-cli/工程模板/node-nest',
 						'/t-cli/工程模板/node-simple-typescript',
-						'/t-cli/工程模板/web-webpack4-vue2-javascript',
 						'/t-cli/工程模板/web-webpack4-typescript',
+						'/t-cli/工程模板/web-webpack4-vue2-javascript',
+						'/t-cli/工程模板/web-webpack4-vue2-typescript',
+						'/t-cli/工程模板/web-webpack4-react-javascript',
+						'/t-cli/工程模板/web-webpack4-react-typescript',
 					]
 				}
 			],

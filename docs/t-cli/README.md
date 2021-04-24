@@ -16,5 +16,8 @@ web端提供 webpack 基础版工程模板（js / ts）、vue2 + webpack(4 / 5)�
 
 * [node-nest](./工程模板/node-nest.md)
 * [node-simple-typescript](./工程模板/node-simple-typescript.md)
-* [web-webpack4-vue2-javascript](./工程模板/web-webpack4-vue2-javascript.md)
 * [web-webpack4-typescript](./工程模板/web-webpack4-typescript.md)
+* [web-webpack4-vue2-javascript](./工程模板/web-webpack4-vue2-javascript.md)
+* [web-webpack4-vue2-typescript](./工程模板/web-webpack4-vue2-typescript.md)
+* [web-webpack4-react-javascript](./工程模板/web-webpack4-react-javascript.md)
+* [web-webpack4-react-typescript](./工程模板/web-webpack4-react-typescript.md)
