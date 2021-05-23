@@ -47,6 +47,7 @@ module.exports = {
 						'/t-cli/工程模板/web-webpack4-react-javascript',
 						'/t-cli/工程模板/web-webpack4-react-typescript',
 						'/t-cli/工程模板/web-webpack5-vue2-javascript',
+						'/t-cli/工程模板/web-webpack5-vue2-typescript',
 					]
 				}
 			],
