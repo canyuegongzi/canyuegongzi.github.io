@@ -18,9 +18,10 @@ module.exports = {
 		lastUpdated: true,
 		nav:[
 			{text: 't-cli', link: '/t-cli/'},
-			{text: 'Web', link: '/web/'},
-			{text: '进阶', link: '/other/'},
+			{text: '前端', link: '/web/'},
 			{text: '后端', link: '/after/'},
+			{text: '进阶', link: '/other/'},
+			{text: '设计', link: '/design/'},
 			{text: 'Blog', link: 'http://blog.canyuegongzi.xyz'},
 			{text: '全栈项目', link: 'https://github.com/canyuegongzi'},
 			{text: 'Github', link: 'https://github.com/canyuegongzi'}
@@ -256,6 +257,15 @@ module.exports = {
 					sidebarDepth: 2,
 					children: [
 						'/after/docker/1',
+					]
+				},
+			],
+			'/design/': [
+				{
+					title: '微前端',
+					sidebarDepth: 2,
+					children: [
+						'/design/microserviceWeb/overview'
 					]
 				},
 			],
