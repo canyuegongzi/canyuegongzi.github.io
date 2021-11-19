@@ -19,6 +19,8 @@ module.exports = {
 		nav:[
 			{text: 't-cli', link: '/t-cli/'},
 			{text: '前端', link: '/web/'},
+			// {text: '浏览器扩展', link: '/chrome-extension/'},
+			{text: '浏览器扩展', link: '/extension/'},
 			{text: '后端', link: '/after/'},
 			{text: '进阶', link: '/other/'},
 			{text: '设计', link: '/design/'},
@@ -232,6 +234,40 @@ module.exports = {
 					sidebarDepth: 2,
 					children: [
 						'/web/webpack/1'
+					]
+				},
+			],
+			'/extension/': [
+				{
+					title: '入门',
+					sidebarDepth: 2,
+					children: [
+						'/extension/what-is-extensions',
+						'/extension/getstarted',
+						'/extension/overview'
+					]
+				},
+				{
+					title: 'API',
+					sidebarDepth: 2,
+					children: [
+						'/extension/manifest',
+						'/extension/background_content',
+						'/extension/user_interface',
+						'/extension/content_scripts',
+						'/extension/permission_warnings',
+						'/extension/options',
+						'/extension/devguide',
+						'/extension/performance',
+						'/extension/user_privacy',
+						'/extension/tut_debugging',
+						'/extension/tut_oauth',
+						'/extension/a11y',
+						'/extension/contentSecurityPolicy',
+						'/extension/xhr',
+						'/extension/messaging',
+						'/extension/nativeMessaging',
+						'/extension/match_patterns',
 					]
 				},
 			],
