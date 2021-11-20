@@ -18,6 +18,7 @@ module.exports = {
 		lastUpdated: true,
 		nav:[
 			{text: 't-cli', link: '/t-cli/'},
+			{text: 'web-ui', link: '/web-component-ui/'},
 			{text: '前端', link: '/web/'},
 			// {text: '浏览器扩展', link: '/chrome-extension/'},
 			{text: '浏览器扩展', link: '/extension/'},
@@ -51,6 +52,16 @@ module.exports = {
 						'/t-cli/工程模板/web-webpack4-react-typescript',
 						'/t-cli/工程模板/web-webpack5-vue2-javascript',
 						'/t-cli/工程模板/web-webpack5-vue2-typescript',
+					]
+				}
+			],
+			'/web-component-ui/': [
+				{
+					title: 'Basic',
+					sidebarDepth: 2,
+					children: [
+						'/web-component-ui/Basic/Button',
+						'/web-component-ui/Basic/Radio',
 					]
 				}
 			],
@@ -387,5 +398,8 @@ module.exports = {
 				},
 			]
 		}
-	}
+	},
+	plugins: [
+		require('vuepress-plugin-demo-container'),
+	],
 };

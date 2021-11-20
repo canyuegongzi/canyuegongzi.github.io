@@ -866,6 +866,21 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@canyuegongzi/web-core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@canyuegongzi/web-core/-/web-core-1.0.1.tgz#1d08c99576d8541866f7feb5c7a91582a3159e16"
+  integrity sha512-tMwn1mI23OJGvDC3cTH3W0wxA+1YaLWFLcHvJyYJkIuvcuOMSOwgjjKTXILfzg0dpNmK8Vn4yeZPIcghW3NlIQ==
+  dependencies:
+    css-vars-ponyfill "^2.4.7"
+
+"@canyuegongzi/web-ui@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@canyuegongzi/web-ui/-/web-ui-1.0.6.tgz#5be38f40ec04666b560e74246d7af6ddd867ce7a"
+  integrity sha512-POqG3oZXGuG/34bov9UlJEUVR9Pqg+7WXWxso4W4tVE43huNMLfJ3vvg2+3W+zJapyu0NUAcoHwR1rNFtAstEA==
+  dependencies:
+    "@canyuegongzi/web-core" "^1.0.1"
+    css-vars-ponyfill "^2.4.7"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.npm.taobao.org/@mrmlnc/readdir-enhanced/download/@mrmlnc/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -1675,6 +1690,11 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/balanced-match/download/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+
+balanced-match@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
+  integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
 base64-js@^1.0.2:
   version "1.5.1"
@@ -2613,6 +2633,14 @@ css-tree@^1.1.2:
   dependencies:
     mdn-data "2.0.14"
     source-map "^0.6.1"
+
+css-vars-ponyfill@^2.4.7:
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/css-vars-ponyfill/-/css-vars-ponyfill-2.4.7.tgz#df6fb2928e5ff013eb67e968761f8ed3d440b1e3"
+  integrity sha512-KhG3AbiZrUpIvAQ9Oc/iBqCitmXg6MajFqNRQd9nHvlwOo8p54HTq5DFCIaAUwMGRyttJ+mBmZCRSHJpe6J9cg==
+  dependencies:
+    balanced-match "^1.0.2"
+    get-css-data "^2.0.2"
 
 css-what@^3.2.1:
   version "3.4.2"
@@ -3578,6 +3606,11 @@ get-caller-file@^2.0.1:
   version "2.0.5"
   resolved "https://registry.npm.taobao.org/get-caller-file/download/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha1-T5RBKoLbMvNuOwuXQfipf+sDH34=
+
+get-css-data@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/get-css-data/-/get-css-data-2.0.2.tgz#5a24784f155944021b6f3fff304c15bcfcebdb9e"
+  integrity sha512-pYqg80/7u/MdBrrAQj2OIoZ08TxEnvCHyU5WFnPxxS/D0S8OpUTkqGFRzn8bO38DmtCuYBpR9VMCen78BL4jiQ==
 
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.1:
   version "1.1.1"
@@ -7636,6 +7669,11 @@ vuepress-plugin-container@^2.0.2:
   dependencies:
     "@vuepress/shared-utils" "^1.2.0"
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-demo-container@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-demo-container/-/vuepress-plugin-demo-container-0.2.0.tgz#5d92161b1c033b91f3cabddd994d5beed47ab6a6"
+  integrity sha512-IXWZUc9+mErxjhBMRvhjHkGlXC3aXLS8wRV4kh4RZYAOVtb8nLv2fmpzwrSZrnIOXLGMcMTObdFruVzX9kBylw==
 
 vuepress-plugin-smooth-scroll@^0.0.3:
   version "0.0.3"
