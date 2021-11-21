@@ -17,17 +17,17 @@ module.exports = {
 	themeConfig: {
 		lastUpdated: true,
 		nav:[
-			{text: 't-cli', link: '/t-cli/'},
-			{text: 'web-ui', link: '/web-component-ui/'},
-			{text: '前端', link: '/web/'},
+			{text: 't-cli', key: '1', link: '/t-cli/'},
+			{text: 'web-ui', key: '2', link: '/web-component-ui/'},
+			{text: '前端', key: '3', link: '/web/'},
 			// {text: '浏览器扩展', link: '/chrome-extension/'},
-			{text: '浏览器扩展', link: '/extension/'},
-			{text: '后端', link: '/after/'},
-			{text: '进阶', link: '/other/'},
-			{text: '设计', link: '/design/'},
-			{text: 'Blog', link: 'http://blog.canyuegongzi.xyz'},
-			{text: '全栈项目', link: 'https://github.com/canyuegongzi'},
-			{text: 'Github', link: 'https://github.com/canyuegongzi'}
+			{text: '浏览器扩展', key: '4', link: '/extension/'},
+			{text: '后端', key: '5', link: '/after/'},
+			{text: '进阶', key: '6', link: '/other/'},
+			{text: '设计', key: '7', link: '/design/'},
+			{text: 'Blog', key: '8', link: 'http://blog.canyuegongzi.xyz'},
+			{text: '全栈项目', key: '9', link: 'https://github.com/canyuegongzi'},
+			{text: 'Github', key: '10', link: 'https://github.com/canyuegongzi'}
 		],
 		sidebar: {
 			'/t-cli/': [
@@ -284,7 +284,7 @@ module.exports = {
 			],
 			'/after/': [
 				{
-					title: 'NodeJS',
+					title: 'node',
 					sidebarDepth: 2,
 					children: [
 						'/after/mongo/1',
@@ -292,7 +292,7 @@ module.exports = {
 					]
 				},
 				{
-					title: 'MongoDB',
+					title: 'mongodb',
 					sidebarDepth: 2,
 					children: [
 						'/after/mongo/1',
@@ -305,6 +305,39 @@ module.exports = {
 					children: [
 						'/after/docker/1',
 					]
+				},
+				{
+					title: 'k8s',
+					sidebarDepth: 2,
+					children: [
+						{
+							title: '环境部署',
+							sidebarDepth: 2,
+							children: [
+								'/after/k8s/环境部署/mysql',
+								'/after/k8s/环境部署/redis',
+								'/after/k8s/环境部署/kafka',
+								'/after/k8s/环境部署/mongodb',
+								'/after/k8s/环境部署/rabbitmq',
+								'/after/k8s/环境部署/zookeeper',
+							]
+						},
+					]
+				},
+				{
+					title: 'mysql',
+					sidebarDepth: 2,
+					children: []
+				},
+				{
+					title: 'redis',
+					sidebarDepth: 2,
+					children: []
+				},
+				{
+					title: 'python',
+					sidebarDepth: 2,
+					children: []
 				},
 			],
 			'/design/': [
