@@ -14,6 +14,7 @@ web端提供 webpack 基础版工程模板（js / ts）、vue2 + webpack(4 / 5)�
 
 ## 模板列表
 
+* [web-core-component（快速创建WebComponent组件）](./工程模板/web-core-component.md)
 * [node-nest](./工程模板/node-nest.md)
 * [node-simple-typescript](./工程模板/node-simple-typescript.md)
 * [web-webpack4-typescript](./工程模板/web-webpack4-typescript.md)

@@ -2,6 +2,8 @@ module.exports = {
 	title: 'Marvin',
 	description: 'Live and Study.',
 	head: [
+		['script', { charset: "utf-8", src: "/core.esm.js" }],
+		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],
 		['link', { rel: 'icon', href: '/images/photo.png' }],
 		['meta', { name: 'theme-color', content: '#0084ff' }],
 		['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -10,15 +12,20 @@ module.exports = {
 		['meta', { name: 'msapplication-TileImage', content: '/images/photo' }],
 		['meta', { name: 'msapplication-TileColor', content: '#000000' }]
 	],
+	theme: 'antdocs',
 	base: '/',
 	markdown: {
 		lineNumbers: false
 	},
 	themeConfig: {
-		lastUpdated: true,
+		lastUpdated: false,
+		backToTop: true,
+		smoothScroll: true,
 		nav:[
 			{text: 't-cli', key: '1', link: '/t-cli/'},
-			{text: 'web-ui', key: '2', link: '/web-component-ui/'},
+			// {text: 'web-plus-ui', key: '13', link: '/component-plus/'},
+			{text: 'web-plus-ui', key: '13', link: 'https://wu-component.github.io/component-plus/'},
+			/*{text: 'web-ui', key: '2', link: '/web-component-ui/'},*/
 			{text: '前端', key: '3', link: '/web/'},
 			// {text: '浏览器扩展', link: '/chrome-extension/'},
 			{text: '浏览器扩展', key: '4', link: '/extension/'},
@@ -33,7 +40,7 @@ module.exports = {
 			'/t-cli/': [
 				{
 					title: '安装',
-					sidebarDepth: 2,
+					sidebarDepth: 0,
 					children: [
 						'/t-cli/安装/install',
 						'/t-cli/安装/t-cli-cmd',
@@ -41,8 +48,9 @@ module.exports = {
 				},
 				{
 					title: '工程模板',
-					sidebarDepth: 2,
+					sidebarDepth: 0,
 					children: [
+						'/t-cli/工程模板/web-core-component',
 						'/t-cli/工程模板/node-nest',
 						'/t-cli/工程模板/node-simple-typescript',
 						'/t-cli/工程模板/web-webpack4-typescript',
@@ -55,16 +63,115 @@ module.exports = {
 					]
 				}
 			],
-			'/web-component-ui/': [
+			'/component-plus/': [
+				{
+					title: "开发者",
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/CorePlus/Install',
+						'/component-plus/CorePlus/Decorators',
+						'/component-plus/CorePlus/Lifecycle',
+						'/component-plus/CorePlus/Build',
+
+					]
+				},
+				{
+					title: 'Basic',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Basic/Button',
+						'/component-plus/Basic/Icon',
+						'/component-plus/Basic/Link',
+						'/component-plus/Basic/Tag',
+						'/component-plus/Basic/Progress',
+					]
+				},
+				{
+					title: 'Form',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Form/Radio',
+						'/component-plus/Form/Input',
+						'/component-plus/Form/Switch',
+						'/component-plus/Form/Checkbox',
+						'/component-plus/Form/Rate',
+					]
+				},
+				{
+					title: 'Layout',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Layout/Layout',
+						'/component-plus/Layout/Breadcrumb',
+						'/component-plus/Layout/PageHeader',
+					]
+				},
+				{
+					title: 'TimePicker',
+					sidebarDepth: 0,
+					children: []
+				},
+				{
+					title: 'Data',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Data/Table',
+					]
+				},
+				{
+					title: 'Notice',
+					sidebarDepth: 0,
+					children: [
+						'/component-plus/Navigation/Message',
+					]
+				},
+				{
+					title: 'Navigation',
+					sidebarDepth: 0,
+					children: [
+					]
+				},
+				{
+					title: 'Others',
+					sidebarDepth: 0,
+					children: [
+					]
+				},
+
+
+
+
+			],
+			/*'/web-component-ui/': [
 				{
 					title: 'Basic',
 					sidebarDepth: 2,
 					children: [
-						'/web-component-ui/Basic/Button',
-						'/web-component-ui/Basic/Radio',
+						'/web-component-ui/Basic/Button'
 					]
-				}
-			],
+				},
+				{
+					title: 'Form',
+					sidebarDepth: 2,
+					children: [
+						'/web-component-ui/Form/Radio',
+						'/web-component-ui/Form/Input',
+					]
+				},
+				{
+					title: 'Data',
+					sidebarDepth: 2,
+					children: [
+						'/web-component-ui/Data/Tree',
+					]
+				},
+				{
+					title: 'Layout',
+					sidebarDepth: 2,
+					children: []
+				},
+
+			],*/
 			'/web/': [
 				{
 					title: 'Vue 原理',
@@ -287,8 +394,20 @@ module.exports = {
 					title: 'node',
 					sidebarDepth: 2,
 					children: [
-						'/after/mongo/1',
-						'/after/mongo/2'
+						{
+							title: '系统模块',
+							sidebarDepth: 1,
+							children: [
+								'/after/nodejs/buffer',
+								'/after/nodejs/events',
+								'/after/nodejs/crypto',
+								'/after/nodejs/net',
+								'/after/nodejs/dns',
+								'/after/nodejs/cache',
+								'/after/nodejs/process-threads',
+								'/after/nodejs/cluster-base',
+							]
+						},
 					]
 				},
 				{
@@ -303,7 +422,7 @@ module.exports = {
 					title: 'Docker',
 					sidebarDepth: 2,
 					children: [
-						'/after/docker/1',
+						'/after/docker/docker-base',
 					]
 				},
 				{
@@ -320,6 +439,13 @@ module.exports = {
 								'/after/k8s/环境部署/mongodb',
 								'/after/k8s/环境部署/rabbitmq',
 								'/after/k8s/环境部署/zookeeper',
+							]
+						},
+						{
+							title: 'SSL',
+							sidebarDepth: 2,
+							children: [
+								'/after/k8s/ssl/ssl'
 							]
 						},
 					]
@@ -346,6 +472,20 @@ module.exports = {
 					sidebarDepth: 2,
 					children: [
 						'/design/microserviceWeb/overview'
+					]
+				},
+				{
+					title: '分布式',
+					sidebarDepth: 2,
+					children: [
+						'/design/分布式/redis-lock'
+					]
+				},
+				{
+					title: '技术选型',
+					sidebarDepth: 2,
+					children: [
+						'/design/技术选型/after'
 					]
 				},
 			],
@@ -434,5 +574,25 @@ module.exports = {
 	},
 	plugins: [
 		require('vuepress-plugin-demo-container'),
+		/*[
+			'vuepress-plugin-comment',
+			{
+				// choosen: 'valine',
+				choosen: 'gitalk',
+				// options选项中的所有参数，会传给Valine的配置
+				options: {
+					// el: '#valine-vuepress-comment',
+					// appId: 'PVsiIhfVXf7pLlF4CKL4duC7-gzGzoHsz',
+					// appKey: 'kpiIiP94nrjz2w5lMMHmyRcA'
+
+					clientID: 'e2904d004ede111c5047',
+					clientSecret: '31929050c6443cdba855213a72a31c904dceb050',
+					repo: 'canyuegongzi.github.io',
+					owner: 'canyuegongzi',
+					admin: ['canyuegongzi'],
+					distractionFreeMode: false
+				}
+			}
+		]*/
 	],
 };

@@ -79,10 +79,6 @@ document.querySelector('#button').addEventListener('click', function(event) {
 
 -------
 
-关注 微信公众号「**程序化思维**」 获取最新 Chrome 插件开发教程。
-
-![mp_wechat](/mp1.png)
-
 
 
 
