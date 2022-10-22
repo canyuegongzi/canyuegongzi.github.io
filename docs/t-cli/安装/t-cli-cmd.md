@@ -1,6 +1,6 @@
 # 常用指令
 
-t-cli 内部集成了几个简单的指令，init 快速创建工程、list 快速查询模板列表、update 脚手架配置信息更新。
+wu-cli 内部集成了几个简单的指令，init 快速创建工程、list 快速查询模板列表、update 脚手架配置信息更新。
 ## init
 
 ```init <app-name>``` 命令主要用于创建工程模板，其中 app-name 是工程名称为必要参数。其他附属参数包括 ```-c```
@@ -11,14 +11,14 @@ t-cli 内部集成了几个简单的指令，init 快速创建工程、list 快�
 ```list``` 命令主要用户查询当前脚手架支持的工程模板，该命令支持 ```-c ```参数，可选值包含 web 和 server。
 
 ```bash
-t list -c web
+wu list -c web
 // OR
-t list -c server
+wu list -c server
 ```
 ## update
 
 ```update``` 主要用于模板列表更新， 该命令可以在不用升级脚手架的情况下获取最新的模板。
 
 ```bash
-t update
+wu update
 ```

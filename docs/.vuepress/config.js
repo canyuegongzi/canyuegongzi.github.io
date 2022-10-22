@@ -2,8 +2,6 @@ module.exports = {
 	title: 'Marvin',
 	description: 'Live and Study.',
 	head: [
-		['script', { charset: "utf-8", src: "/core.esm.js" }],
-		['script', { charset: "utf-8", src: "/web-plus.esm.js" }],
 		['link', { rel: 'icon', href: '/images/photo.png' }],
 		['meta', { name: 'theme-color', content: '#0084ff' }],
 		['link', { rel: 'manifest', href: '/manifest.json' }],
@@ -22,7 +20,7 @@ module.exports = {
 		backToTop: true,
 		smoothScroll: true,
 		nav:[
-			{text: 't-cli', key: '1', link: '/t-cli/'},
+			{text: 'wu-cli', key: '1', link: '/t-cli/'},
 			// {text: 'web-plus-ui', key: '13', link: '/component-plus/'},
 			{text: 'web-plus-ui', key: '13', link: 'https://wu-component.github.io/component-plus/'},
 			/*{text: 'web-ui', key: '2', link: '/web-component-ui/'},*/
