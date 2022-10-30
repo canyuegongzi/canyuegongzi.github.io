@@ -473,10 +473,10 @@ module.exports = {
 					]
 				},
 				{
-					title: '分布式',
+					title: '架构',
 					sidebarDepth: 2,
 					children: [
-						'/design/分布式/redis-lock'
+						'/design/架构/Web-Editor'
 					]
 				},
 				{
@@ -486,6 +486,13 @@ module.exports = {
 						'/design/技术选型/after'
 					]
 				},
+				{
+					title: '分布式',
+					sidebarDepth: 2,
+					children: [
+						'/design/分布式/redis-lock'
+					]
+				}
 			],
 			'/other/': [
 				// {
